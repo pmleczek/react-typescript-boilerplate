@@ -4,10 +4,10 @@ module.exports = {
     testEnvironment: 'jsdom',
     moduleNameMapper: {
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-            '<rootDir>/tests/mocks/fileMock.ts',
-        '\\.(css|less|sass|scss)$': '<rootDir>/tests/mocks/styleMock.ts',
+            '<rootDir>/test/mocks/fileMock.ts',
+        '\\.(css|less|sass|scss)$': '<rootDir>/test/mocks/styleMock.ts',
     },
-    setupFilesAfterEnv: ['<rootDir>/tests/setupTests.ts'],
+    setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
     collectCoverageFrom: ['**/*.{ts,tsx}', '!**/*.d.ts', '!**/node_modules/**', '!**/vendor/**'],
     coverageThreshold: {
         global: {
@@ -17,4 +17,5 @@ module.exports = {
             statements: 100,
         },
     },
+    testMatch: ["**/tests/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"]
 };
